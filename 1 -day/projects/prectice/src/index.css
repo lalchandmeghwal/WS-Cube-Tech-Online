@@ -1,0 +1,9 @@
+@import "tailwindcss";
+body {
+    background: #242424;
+    color: white;
+}
+
+#courses {
+    background: linear-gradient(97.91deg, #002ccd 7.06%, #000825 98.51%);
+}
