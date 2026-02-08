@@ -1,0 +1,145 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	list-style: none;
+		text-decoration: none;
+}
+
+body{
+	background: black;
+}
+
+main{
+	width: 1170px;
+	background: yellow;
+	margin: auto;
+}
+
+.topHeader{
+	width: 100%;
+	display: flex;
+	padding: 10px;
+	justify-content: space-between;
+	background: #343130;
+}
+
+.topHeaderLeft,.topHeaderRight{
+	display: flex;
+	gap: 10px;
+}
+.topHeaderLeft a,.topHeaderRight a{
+
+	color: white;
+}
+
+header{
+	width: 100%;
+	display: flex;
+	background: white;
+	padding: 10px;
+	justify-content: space-between;
+}
+header nav ul{
+	display: flex;
+	gap: 40px;
+	margin-top: 90px;
+	
+}
+header nav ul li a{
+	font-size: 20px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
+.row3{
+	margin: 15px;
+	background: white;
+	padding: 15px;
+	gap: 20px;
+	display: flex;
+
+}
+.row3 aside{
+	width: 20%;
+}
+.leftMenu{
+	border: 1px solid #ccc;
+	margin-bottom: 15px;
+}
+.leftMenu ul li{
+	text-align: center;
+	background: #00a8ec;
+	padding: 10px 0px;
+	margin-bottom: 5px;
+}
+.leftMenu ul li a{
+	color: white;
+}
+
+.leftNews{
+	border: 0px solid #ccc;
+}
+.leftNews h3{
+	background: #ef9c00;
+	text-align: center;
+	color: white;
+	border-radius: 15px 15px 0px 0px;
+	padding: 10px 0px;
+}
+.leftNews ul{
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+.leftNews ul li{
+	margin-bottom: 10px;
+}
+.leftNews ul li img{
+	border-radius: 50%;
+	margin-right: 8px;
+}
+
+.row3Right{
+	width: 80%;
+}
+
+.banner img{
+	width: 100%;
+	border-bottom: 10px solid #ccc;
+}
+
+.row3Right h2{
+	width: 150px;
+	background: #ccc;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+.courseList{
+	border: 1px solid red;
+	margin-top: 15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.courseItems{
+	width: 50%;
+	display: flex;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+.courseItems figure{
+	background: #e6611c;
+	border-radius: 50%;
+	width: 40px;
+	text-align: center;
+	padding-top: 5px;
+	height: 40px;
+}
+.courseItems h3{
+	font-weight: normal;
+	padding-top: 10px;
+}
