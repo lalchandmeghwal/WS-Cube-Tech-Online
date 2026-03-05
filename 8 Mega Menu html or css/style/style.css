@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    color: black;
+    background: white;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 60px;
+    box-shadow: 0px 0px 10px 5px rgb(247, 246, 246);
+    position: relative;
+}
+
+.leftHeader {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+
+.leftHeader figure {
+    max-width: 60px;
+}
+
+.leftHeader figure img {
+    width: 100%;
+}
+
+.leftHeader nav>ul {
+    display: flex;
+    text-align: center;
+    gap: 30px;
+}
+
+.leftHeader nav>ul>li>a {
+    color: black;
+    font-size: 20px;border-bottom: 5px solid transparent;
+    padding: 30px 5px;
+    padding-top: 8px;
+    
+}
+
+.leftHeader nav>ul>li:hover .megaMenu{
+    display: flex;
+}
+
+.leftHeader nav>ul>li:hover>a {
+    border-bottom: 5px solid red;
+}
+
+.megaMenu{
+    box-shadow: 0 0 10px 5px #f9f7f7;
+   
+    width: 80%;
+   
+    position: absolute;
+    left: 7%;
+    top: 99%;
+    display: none;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 10;
+}
+
+.megaMenu h3{
+    text-align: start;
+}
+.megaMenu ul {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    text-align: start;
+}
+
+.megaMenu ul li a{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+.rightHeader {
+    display: flex;
+    text-align: center;
+    flex-grow: 1;
+    ;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.rightHeader .search {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 0 10px;
+}
+
+.rightHeader .search input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 20px;
+
+}
+
+
+.rightHeader .profileContainer {
+    display: flex;
+    gap: 15px;
+}
+
+.rightHeader .profileContainer>div {
+    display: flex;
+    flex-direction: column;
+   cursor: pointer;
+    gap: 8px;
+    align-items: center;
+
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Animation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: #121323;
+        }
+
+        .line {
+            height: 150px;
+            width: 10px;
+            background: red;
+            margin-left: 40px;
+            /* animation: line 7s linear infinite; */
+        }
+
+        .line1 {
+            animation: line 1s linear infinite ;
+            background: #c47e04;
+        }
+
+        .line2 {
+            animation: line 2s linear infinite ;
+            background: #859da9;
+        }
+
+        .line3 {
+            animation: line 1s linear infinite ;
+            background: #beb206;
+        }
+
+        .line4 {
+            animation: line 2s linear infinite ;
+            background: #065608;
+        }
+
+        @keyframes line {
+
+            0% {
+                height: 100px;
+            }
+
+            100% {
+                height: 150px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="line line1 "></div>
+    <div class="line line2 "></div>
+    <div class="line line3 "></div>
+    <div class="line line4 "></div>
+
+</body>
+
+</html>
+

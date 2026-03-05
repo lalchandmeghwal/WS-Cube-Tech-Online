@@ -1,0 +1,343 @@
+@media (width < 500px) {
+    header .headrMid {
+        justify-content: center;
+    }
+
+    .headrMid .buttonContainer {
+        position: absolute;
+        bottom: -21rem;
+        left: 10%;
+        z-index: 1000;
+        padding: 10px;
+        display: none;
+
+    }
+}
+
+@media (width < 1250px) {
+    .career .container {
+        padding: 20px;
+    }
+}
+
+@media (width < 1140px) {
+
+
+    .sectionHeroMid h1 {
+
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    .sectionHeroMid .buttons button {
+        padding: 16px 28px;
+    }
+
+    .sectionHeroMid .form::before {
+
+        width: 450px;
+        height: 450px;
+        top: -10px;
+        left: -4rem;
+    }
+
+
+    .highlights .highMid h3 {
+
+        font-size: 26px;
+    }
+
+    .highMid .highContainer .content p {
+        font-size: 14px;
+    }
+}
+
+
+@media (width < 1000px) {
+
+    .highMid .highContainer {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .highlights .highMid h3 {
+        font-size: 30px;
+    }
+
+    .highMid .highContainer .content p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .certificate .certificateMid {
+        flex-direction: column;
+    }
+
+    .certificate .certificateMid img {
+        width: 800px;
+        padding: 20px;
+    }
+}
+
+
+@media (width < 970px) {
+
+    .sectionHeroMid .buttons button {
+        padding: 16px 20px;
+    }
+
+    .learn {
+        padding: 0 20px;
+    }
+
+    .courseMid .center h2 {
+
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .courseMid .center p {
+
+        font-size: 15px;
+    }
+
+}
+
+
+@media (width < 940px) {
+
+    .sectionHeroMid {
+        flex-direction: column;
+        justify-content: center;
+
+        align-items: center;
+    }
+
+    .sectionHeroMid .content {
+        width: 100%;
+    }
+
+    .sectionHeroMid .content {
+        max-width: 600px;
+    }
+
+    .counterMid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .highlights .highMid h3 {
+
+        font-size: 26px;
+    }
+
+    .highMid .highContainer .content p {
+        font-size: 14px;
+    }
+
+    .digitalMarketing .digitalMid ul {
+        display: none;
+    }
+
+    .digitalMarketing .digitalMid .para p {
+        font-size: 18px;
+    }
+
+    .courseMid .left img {
+        width: 150px;
+
+
+    }
+
+    .courseMid .right img {
+
+        width: 150px;
+
+
+
+    }
+
+    .companies .companiesMid h2 {
+        font-size: 25px;
+    }
+}
+
+
+@media (width < 700px) {
+    .highMid .highContainer {
+
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .digitalMarketing .digitalMid .para {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .digitalMarketing .digitalMid h2 {
+        font-size: 34px;
+    }
+
+    .companies .companiesMid h2 {
+        font-size: 20px;
+    }
+}
+
+
+@media (width < 750px) {
+    .courseMid .left img {
+        display: none;
+    }
+
+    .courseMid .right img {
+        display: none;
+    }
+
+    .courseMid {
+        padding: 10px;
+    }
+}
+
+@media (width < 800px) {
+    .learnMid .container {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .career .container {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (width < 650px) {
+    .students .studentsMid .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .FAQs .FAQsMid h2 {
+        font-size: 34px;
+    }
+
+    .companies .companiesMid h2 {
+        font-size: 19px;
+    }
+}
+
+@media (width < 550px) {
+    .learnMid .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .courseMid .center h2 {
+        font-size: 25px;
+    }
+
+    .courseMid .center p {
+        font-size: 16px;
+    }
+
+    .students .studentsMid h2 {
+        font-size: 30px;
+
+    }
+
+    .FAQs .FAQsMid h2 {
+        font-size: 25px;
+    }
+
+    .companies .companiesMid h2 {
+        font-size: 15px;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .companies {
+        background: #FFFFFF;
+        margin: 2rem 4rem;
+    }
+
+
+}
+
+
+@media (width < 500px) {
+    .sectionHeroMid {
+        margin-top: 0rem;
+    }
+
+    .sectionHeroMid h1 {
+        font-size: 40px;
+    }
+
+    .sectionHeroMid ul li {
+        font-size: 20px;
+    }
+
+    .sectionHeroMid .buttons button {
+        padding: 16px 10px;
+        font-size: 15px;
+    }
+
+    .sectionHeroMid .form::before {
+        display: none;
+
+    }
+
+    .sectionHeroMid .form {
+        max-width: 100%;
+    }
+
+    .counterMid {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .digitalMarketing .digitalMid .para p {
+        font-size: 16px;
+    }
+
+    .learnMid h2 {
+        font-size: 26px;
+        padding-top: 1rem;
+    }
+
+    .studentsMid .details>p {
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0%;
+        margin-top: 1rem;
+    }
+
+    .career .container {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+
+    .career h2 {
+        font-size: 35px;
+    }
+
+    .certificate .certificateMid img {
+        width: 300px;
+        padding: 20px;
+    }
+
+    .heroSection .buttons button {
+        font-size: 14px;
+    }
+
+
+    header .buttonContainer {
+        display: none important;
+
+    }
+}

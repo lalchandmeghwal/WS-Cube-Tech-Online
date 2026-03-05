@@ -20,7 +20,7 @@ const Header = () => {
 					<div className='flex items-center gap-2 '>
 						<img src={INFO} alt="" />
 						<div>
-							<a  className='text-white text-[20px] font-semibold '  href="">info@iipacademy.com</a>
+							<a className='text-white text-[20px] font-semibold ' href="">info@iipacademy.com</a>
 						</div>
 					</div>
 				</div>
@@ -31,7 +31,7 @@ const Header = () => {
 					<div>
 						<img className='w-40' src={logo} alt="" />
 					</div>
-					<nav className='flex w-245  justify-between  list-none text-2xl font-medium  px-5 '>
+					<nav className='flex w-245   justify-between  list-none text-2xl font-medium  px-5 pr-15 p-2 '>
 
 						{/*
 				<li>Gallery</li>
@@ -57,5 +57,16 @@ const Header = () => {
 export default Header;
 
 const Li = ({ to, titile }) => {
-	return (<NavLink className={({ isActive }) => isActive ? 'text-[#00a8ec]' : 'text-black'} to={to}>{titile}</NavLink>)
+	return (<NavLink className={({ isActive }) =>
+		`relative pb-1 transition-colors duration-300
+	    after:content-[''] after:absolute after:left-0 
+		after:bottom-0 after:h-0.75 after:w-full after:bg-[#00a8ec]
+                         after:scale-x-0 after:origin-left after:transition-transform after:duration-300
+                          hover:after:scale-x-100
+                         ${isActive ? 'after:scale-x-100 text-[#00a8ec]' : 'text-black'}`
+
+
+	}
+		to={to}>{titile}</NavLink>)
 }
+
