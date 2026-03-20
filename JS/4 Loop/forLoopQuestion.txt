@@ -1,0 +1,592 @@
+q 1
+for(let i=1;i<=3;i++){
+console.log(i)
+}
+A) 1 2 3
+ B) 0 1 2
+ C) 1 2
+ D) Error
+
+q 2
+for(let i=3;i>=1;i--){
+console.log(i)
+}
+A) 1 2 3
+ B) 3 2 1
+ C) 3 2
+ D) Error
+
+q 3
+let i=1;
+
+while(i<=3){
+console.log(i)
+i++
+}
+A) 1 2 3
+ B) 0 1 2
+ C) 1 2
+ D) Error
+
+q 4
+let i=5;
+
+do{
+console.log(i)
+i++
+}while(i<5);
+
+A) 5
+ B) Nothing
+ C) Error
+ D) Infinite
+
+q 5
+for(let i=1;i<=5;i++){
+
+if(i==3)
+break;
+
+console.log(i);
+}
+A) 1 2
+ B) 1 2 3
+ C) 1 2 3 4
+ D) Error
+
+q 6
+for(let i=1;i<=5;i++){
+
+if(i==3)
+continue;
+
+console.log(i)
+}
+A) 1 2 4 5
+ B) 1 2 3 4
+ C) 1 2 3 4 5
+ D) Error
+
+q 7
+let sum=0;
+
+for(let i=1;i<=3;i++){
+sum+=i
+}
+
+console.log(sum)
+A) 3
+ B) 6
+ C) 5
+ D) Error
+
+q 8
+for(let i=0;i<3;i++){
+console.log(i);
+}
+A) 0 1 2
+ B) 1 2 3
+ C) 0 1
+ D) Error
+
+q 9
+for(let i=1;i<=5;i+=2){
+console.log(i)
+}
+A) 1 3 5
+ B) 1 2 3
+ C) 2 4
+ D) Error
+
+q 10
+let arr=[1,2,3];
+
+for(let i in arr){
+console.log(i);
+};
+
+A) 1 2 3
+ B) 0 1 2
+ C) Error
+ D) Undefined
+
+q 11. Factorial Using Loop
+let n = 5;
+let fact = 1;
+
+for (let i = 1; i <= n; i++) {
+ fact *= i;
+}
+
+console.log(fact);
+A) 120
+ B) 60
+ C) 25
+ D) Error
+
+q 12. Fibonacci Series
+let a = 0;
+let b = 1;
+
+for (let i = 1; i <= 3; i++) {
+ let temp = a + b;
+ a = b;
+ b = temp;
+}
+
+console.log(b);
+A) 2
+ B) 3
+ C) 5
+ D) 1
+
+q 13. Prime Number Check
+let num = 7;
+let prime = true;
+
+for (let i = 2; i < num; i++) {
+ if (num % i === 0) {
+   prime = false;
+ }
+}
+
+console.log(prime);
+A) true
+ B) false
+ C) Error
+ D) undefined
+
+q 14. Reverse Number
+let num = 123;
+let rev = 0;
+
+while (num > 0) {
+ rev = rev * 10 + (num % 10);
+ num = Math.floor(num / 10);
+}
+ 
+console.log(rev);
+A) 321
+ B) 123
+ C) 231
+ D) Error
+
+q 15. Sum of Digits
+let num = 123;
+let sum = 0;
+
+while (num > 0) {
+ sum += num % 10;
+ num = Math.floor(num / 10);
+}
+
+console.log(sum);
+A) 6
+ B) 5
+ C) 4
+ D) Error
+
+q 16. Count Digits
+let num = 12345;
+let count = 0;
+
+while (num > 0) {
+ count++;
+ num = Math.floor(num / 10);
+}
+
+console.log(count);
+A) 3
+ B) 4
+ C) 5
+ D) Error
+
+q 17. Largest Digit
+let num = 4729;
+let max = 0;
+
+while (num > 0) {
+ let digit = num % 10;
+ if (digit > max) {
+   max = digit;
+ }
+ num = Math.floor(num / 10);
+}
+
+console.log(max);
+A) 7
+ B) 9
+ C) 4
+ D) Error
+
+q 18. Palindrome Number
+let num = 121;
+let original = num;
+let rev = 0;
+
+while (num > 0) {
+ rev = rev * 10 + num % 10;
+ num = Math.floor(num / 10);
+};
+
+console.log(original === rev);
+A) true
+ B) false
+ C) Error
+ D) undefined
+
+q 19. Table of Any Number
+let n = 5;
+
+for (let i = 1; i <= 3; i++) {
+ console.log(n * i);
+};
+A) 5 10 15
+ B) 5 15 25
+ C) 1 2 3
+ D) Error
+
+q 20. Tables 1–10
+for (let i = 1; i <= 3; i++) {
+ console.log(i * 2);
+}
+A) 2 4 6
+ B) 1 2 3
+ C) 2 3 4
+ D) Error
+
+q 21. Sum of Array Elements
+let arr = [1,2,3,4];
+let sum = 0;
+
+for (let i = 0; i < arr.length; i++) {
+ sum += arr[i];
+}
+
+console.log(sum);
+A) 10
+ B) 8
+ C) 6
+ D) Error
+
+q 22. Largest Element in Array
+let arr = [4,8,2,9];
+let max = arr[0];
+
+for (let i = 1; i < arr.length; i++) {
+ if (arr[i] > max) {
+   max = arr[i];
+ }
+}
+
+console.log(max);
+A) 8
+ B) 9
+ C) 4
+ D) Error
+
+23. Reverse Array
+let arr = [1,2,3];
+let rev = [];
+
+for (let i = arr.length-1; i >= 0; i--) {
+ rev.push(arr[i]);
+};
+
+console.log(rev);
+A) [3,2,1]
+ B) [1,2,3]
+ C) [2,3,1]
+ D) Error
+
+24. Count Even Numbers
+let arr = [1,2,3,4,6];
+let count = 0;
+
+for (let i = 0; i < arr.length; i++) {
+ if (arr[i] % 2 === 0) {
+   count++;
+ }
+};
+
+console.log(count);
+A) 2
+ B) 3
+ C) 4
+ D) Error
+
+25. Find Duplicates
+let arr = [1,2,2,3];
+let count = 0;
+
+for (let i = 0; i < arr.length; i++) {
+ if (arr[i] === 2) {
+   count++;
+ }
+}
+
+console.log(count);
+A) 1
+ B) 2
+ C) 3
+ D) Error
+
+26. Star Pattern
+for(let i=1;i<=3;i++){
+console.log("*".repeat(i))
+}
+A)
+*
+**
+***
+B)
+***
+**
+*
+C)
+*
+***
+*****
+D) Error
+
+27. Reverse Star Pattern
+for(let i=3;i>=1;i--){
+console.log("*".repeat(i))
+}
+A)
+***
+**
+*
+B)
+*
+**
+***
+C)
+**
+***
+*
+D) Error
+
+28. Number Triangle
+for(let i=1;i<=3;i++){
+console.log(i)
+}
+A) 1 2 3
+ B) 3 2 1
+ C) 1 1 1
+ D) Error
+
+29. Repeated Number Pattern
+for(let i=1;i<=3;i++){
+console.log(String(i).repeat(i));
+}
+A)
+1
+22
+333
+B)
+1
+12
+123
+C)
+111
+222
+333
+D) Error
+
+30. Reverse Number Pattern
+for(let i=3;i>=1;i--){
+console.log(i)
+};
+A) 3 2 1
+ B) 1 2 3
+ C) 2 3 4
+ D) Error
+31. Prime Numbers from 1–100
+let count = 0;
+
+for (let i = 2; i <= 10; i++) {
+ let prime = true;
+
+ for (let j = 2; j < i; j++) {
+   if (i % j === 0) {
+     prime = false;
+   }
+ }
+
+ if (prime) {
+   count++;
+ }
+}
+
+console.log(count);
+A) 4
+ B) 5
+ C) 6
+ D) 7
+
+32. Armstrong Number
+let num = 153;
+let sum = 0;
+let temp = num;
+
+while (temp > 0) {
+ let digit = temp % 10;
+ sum += digit * digit * digit;
+ temp = Math.floor(temp / 10);
+}
+
+console.log(sum === num);
+A) true
+ B) false
+ C) Error
+ D) undefined
+
+33. Perfect Number
+let num = 6;
+let sum = 0;
+
+for (let i = 1; i < num; i++) {
+ if (num % i === 0) {
+   sum += i;
+ }
+}
+
+console.log(sum === num);
+A) true
+ B) false
+ C) Error
+ D) Nothing
+
+34. GCD Using Loop
+let a = 12;
+let b = 18;
+let gcd = 1;
+
+for (let i = 1; i <= a && i <= b; i++) {
+ if (a % i === 0 && b % i === 0) {
+   gcd = i;
+ }
+}
+
+console.log(gcd);
+A) 3
+ B) 6
+ C) 9
+ D) 12
+
+35. LCM Using Loop
+let a = 4;
+let b = 6;
+let lcm;
+
+for (let i = 1; i <= a * b; i++) {
+ if (i % a === 0 && i % b === 0) {
+   lcm = i;
+   break;
+ }
+}
+
+console.log(lcm);
+A) 6
+ B) 8
+ C) 12
+ D) 24
+
+36. Second Largest Number in Array
+let arr = [10, 25, 8, 30, 15];
+
+let max = 0;
+let second = 0;
+
+for (let i = 0; i < arr.length; i++) {
+ if (arr[i] > max) {
+   second = max;
+   max = arr[i];
+ } else if (arr[i] > second && arr[i] !== max) {
+   second = arr[i];
+ }
+}
+
+console.log(second);
+A) 25
+ B) 30
+ C) 15
+ D) 10
+
+37. Bubble Sort Logic
+let arr = [5,3,2];
+
+for(let i=0;i<arr.length;i++){
+for(let j=0;j<arr.length-1;j++){
+if(arr[j] > arr[j+1]){
+let temp = arr[j]
+arr[j] = arr[j+1]
+arr[j+1] = temp
+}
+}
+}
+
+console.log(arr)
+A) [2,3,5]
+ B) [5,3,2]
+ C) [3,5,2]
+ D) Error
+
+38. Remove Duplicates
+let arr = [1,2,2,3];
+let unique = [];
+
+for(let i=0;i<arr.length;i++){
+if(!unique.includes(arr[i])){
+unique.push(arr[i])
+}
+}
+
+console.log(unique.length)
+A) 2
+ B) 3
+ C) 4
+ D) Error
+
+39. Count Vowels in String
+let str = "hello";
+let count = 0;
+
+for(let i=0;i<str.length;i++){
+if("aeiou".includes(str[i])){
+count++
+}
+}
+
+console.log(count)
+A) 1
+ B) 2
+ C) 3
+ D) 4
+
+40. Reverse String Using Loop
+let str = "abc";
+let rev = "";
+
+for(let i=str.length-1;i>=0;i--){
+rev += str[i]
+}
+
+console.log(rev)
+A) cba
+ B) abc
+ C) bac
+ D) Error
+
+
+
+ hard 
+let a = 0;
+let b = 1;
+
+for (let i = 1; i <= 3; i++) {
+ let temp = a + b;
+ a = b;
+ b = temp;
+}

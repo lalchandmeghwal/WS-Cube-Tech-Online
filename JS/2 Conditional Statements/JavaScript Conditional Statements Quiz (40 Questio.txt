@@ -1,0 +1,520 @@
+JavaScript Conditional Statements Quiz (40 Questions)
+1
+let x = 5;
+if (x > 3) {
+ console.log("Hello");
+}
+A) Hello
+ B) Error
+ C) Undefined
+ D) Nothing
+
+2
+let x = 2;
+if (x > 5) {
+ console.log("Yes");
+} else {
+ console.log("No");
+}
+A) Yes
+ B) No
+ C) Error
+ D) Nothing
+
+3
+let num = 10;
+if (num % 2 === 0) {
+ console.log("Even");
+} else {
+ console.log("Odd");
+}
+A) Even
+ B) Odd
+ C) Error
+ D) Nothing
+
+4
+let age = 20;
+if (age >= 18) {
+ console.log("Adult");
+}
+A) Adult
+ B) Minor
+ C) Error
+ D) Nothing
+
+5
+let a = 5;
+let b = 7;
+
+if (a > b) {
+ console.log(a);
+} else {
+ console.log(b);
+}
+A) 5
+ B) 7
+ C) Error
+ D) Nothing
+
+6
+let marks = 35;
+
+if (marks >= 40) {
+ console.log("Pass");
+} else {
+ console.log("Fail");
+}
+A) Pass
+ B) Fail
+ C) Error
+ D) Nothing
+
+7
+let x = 0;
+
+if (x) {
+ console.log("True");
+} else {
+ console.log("False");
+}
+A) True
+ B) False
+ C) Error
+ D) Nothing
+
+8
+let x = 10;
+
+if (x > 5 && x < 20) {
+ console.log("Valid");
+}
+A) Valid
+ B) Invalid
+ C) Error
+ D) Nothing
+
+9
+let x = 5;
+
+if (x == "5") {
+ console.log("Match");
+}
+A) Match
+ B) No Match
+ C) Error
+ D) Nothing
+
+10
+let x = 5;
+
+if (x === "5") {
+ console.log("Match");
+} else {
+ console.log("No Match");
+}
+A) Match
+ B) No Match
+ C) Error
+ D) Nothing
+
+11
+let x = 15;
+
+if (x > 10) {
+ console.log("A");
+} else if (x > 5) {
+ console.log("B");
+}
+A) A
+ B) B
+ C) Error
+ D) Nothing
+
+12
+let day = 2;
+
+switch(day){
+case 1:
+console.log("Mon");
+break;
+
+case 2:
+console.log("Tue");
+break;
+
+default:
+console.log("Other");
+}
+A) Mon
+ B) Tue
+ C) Other
+ D) Error
+
+13
+let a = 5;
+let b = 5;
+
+if (a >= b) {
+console.log("True");
+}
+A) True
+ B) False
+ C) Error
+ D) Nothing
+
+14
+let x = -5;
+
+if (x > 0)
+console.log("Positive");
+else
+console.log("Negative");
+A) Positive
+ B) Negative
+ C) Error
+ D) Nothing
+
+15
+let score = 85;
+
+if (score > 90)
+console.log("A");
+else if (score > 80)
+console.log("B");
+else
+console.log("C");
+A) A
+ B) B
+ C) C
+ D) Error
+
+16
+let x = 10;
+
+if (x < 5 || x > 8)
+console.log("Yes");
+A) Yes
+ B) No
+ C) Error
+ D) Nothing
+
+17
+let x = 0;
+
+if (!x)
+console.log("Falsy");
+A) Falsy
+ B) True
+ C) Error
+ D) Nothing
+
+18
+let x = null;
+
+if (x == undefined)
+console.log("Equal");
+A) Equal
+ B) Not Equal
+ C) Error
+ D) Nothing
+
+19
+let x = 20;
+let y = 30;
+
+if (x > 10 && y < 40)
+console.log("Correct");
+A) Correct
+ B) Incorrect
+ C) Error
+ D) Nothing
+
+20
+let a = 2;
+
+switch(a){
+case 1:
+console.log("One");
+break;
+
+case 2:
+console.log("Two");
+break;
+
+default:
+console.log("Other");
+}
+A) One
+ B) Two
+ C) Other
+ D) Error
+21. Largest of 3 Numbers
+let a = 10;
+let b = 25;
+let c = 15;
+
+if (a > b && a > c) {
+ console.log("A is largest");
+} else if (b > a && b > c) {
+ console.log("B is largest");
+} else {
+ console.log("C is largest");
+}
+A) A is largest
+ B) B is largest
+ C) C is largest
+ D) Error
+
+22. Leap Year Condition
+let year = 2024;
+
+if (year % 4 === 0) {
+ console.log("Leap Year");
+} else {
+ console.log("Not Leap Year");
+}
+A) Leap Year
+ B) Not Leap Year
+ C) Error
+ D) Nothing
+
+23. Grade Calculator
+let marks = 85;
+
+if (marks >= 90) {
+ console.log("Grade A");
+} else if (marks >= 80) {
+ console.log("Grade B");
+} else {
+ console.log("Grade C");
+}
+A) Grade A
+ B) Grade B
+ C) Grade C
+ D) Error
+
+24. Login Validation
+let username = "admin";
+let password = "1234";
+
+if (username === "admin" && password === "1234") {
+ console.log("Login Successful");
+} else {
+ console.log("Invalid Login");
+}
+A) Login Successful
+ B) Invalid Login
+ C) Error
+ D) Nothing
+
+25. Traffic Light System
+let light = "red";
+
+if (light === "red") {
+ console.log("Stop");
+} else if (light === "yellow") {
+ console.log("Ready");
+} else {
+ console.log("Go");
+}
+A) Stop
+ B) Ready
+ C) Go
+ D) Error
+
+26. Temperature Classification
+let temp = 35;
+
+if (temp < 20) {
+ console.log("Cold");
+} else if (temp < 30) {
+ console.log("Normal");
+} else {
+ console.log("Hot");
+}
+A) Cold
+ B) Normal
+ C) Hot
+ D) Error
+
+27. Electricity Bill
+let units = 120;
+
+if (units < 100) {
+ console.log("Low Bill");
+} else if (units < 200) {
+ console.log("Medium Bill");
+} else {
+ console.log("High Bill");
+}
+A) Low Bill
+ B) Medium Bill
+ C) High Bill
+ D) Error
+
+28. Scholarship Eligibility
+let marks = 90;
+let income = 150000;
+
+if (marks >= 85 && income < 200000) {
+ console.log("Scholarship Approved");
+} else {
+ console.log("Not Eligible");
+}
+A) Scholarship Approved
+ B) Not Eligible
+ C) Error
+ D) Nothing
+
+29. Bank Loan Approval
+let salary = 40000;
+let creditScore = 750;
+
+if (salary > 30000 && creditScore > 700) {
+ console.log("Loan Approved");
+} else {
+ console.log("Loan Rejected");
+}
+A) Loan Approved
+ B) Loan Rejected
+ C) Error
+ D) Nothing
+
+30. Voting Eligibility
+let age = 17;
+
+if (age >= 18) {
+ console.log("Eligible to Vote");
+} else {
+ console.log("Not Eligible");
+}
+A) Eligible to Vote
+ B) Not Eligible
+ C) Error
+ D) Nothing
+
+31. Discount Condition
+let amount = 6000;
+
+if (amount > 5000) {
+ console.log("Discount Applied");
+} else {
+ console.log("No Discount");
+}
+A) Discount Applied
+ B) No Discount
+ C) Error
+ D) Nothing
+
+32. Password Validation
+let password = "abc123";
+
+if (password.length >= 6) {
+ console.log("Valid Password");
+} else {
+ console.log("Weak Password");
+}
+A) Valid Password
+ B) Weak Password
+ C) Error
+ D) Nothing
+
+33. Triangle Type
+let a = 5;
+let b = 5;
+let c = 5;
+
+if (a === b && b === c) {
+ console.log("Equilateral Triangle");
+} else if (a === b || b === c || a === c) {
+ console.log("Isosceles Triangle");
+} else {
+ console.log("Scalene Triangle");
+}
+A) Equilateral
+ B) Isosceles
+ C) Scalene
+ D) Error
+
+34. Number Range
+let num = 25;
+
+if (num >= 10 && num <= 50) {
+ console.log("In Range");
+} else {
+ console.log("Out of Range");
+}
+A) In Range
+ B) Out of Range
+ C) Error
+ D) Nothing
+
+35. Age Based Ticket Price
+let age = 10;
+
+if (age < 12) {
+ console.log("Child Ticket");
+} else if (age < 60) {
+ console.log("Adult Ticket");
+} else {
+ console.log("Senior Ticket");
+}
+A) Child Ticket
+ B) Adult Ticket
+ C) Senior Ticket
+ D) Error
+
+36. Salary Bonus
+let salary = 60000;
+
+if (salary > 50000) {
+ console.log("Bonus Eligible");
+} else {
+ console.log("No Bonus");
+}
+A) Bonus Eligible
+ B) No Bonus
+ C) Error
+ D) Nothing
+
+37. Website Access
+let age = 20;
+let country = "India";
+
+if (age >= 18 && country === "India") {
+ console.log("Access Granted");
+} else {
+ console.log("Access Denied");
+}
+A) Access Granted
+ B) Access Denied
+ C) Error
+ D) Nothing
+
+38. Character Type
+let char = "A";
+
+if (char >= "A" && char <= "Z") {
+ console.log("Uppercase");
+} else {
+ console.log("Other");
+}
+A) Uppercase
+ B) Lowercase
+ C) Other
+ D) Error
+
+39. Multi Condition
+let a = 5;
+let b = 10;
+
+if (a < b && b > 5) {
+ console.log("True");
+} else {
+ console.log("False");
+}
+A) True
+ B) False
+ C) Error
+ D) Nothing

@@ -1,0 +1,24 @@
+
+
+
+const arr = [1, 2, 3, 4, 5,];
+
+for (let value of arr) {
+    arr.pop();
+};
+
+Rounde 1
+[1,2,3,4,]
+
+Rounde 2
+
+
+Rounde 3
+
+
+Rounde 4
+
+
+Rounde 5
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Prectice</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // for (let i = 1; i <= 5; i++) {
+        //     let str = '';
+        //     for (let j = 1; j <= i; j++) {
+        //         str += j + " ";
+        //     };
+        //     console.log(str)
+        // };
+
+        // for (let i = 1; i <= 4; i++) {
+        //         console.log( i,  i + 2);
+        //     }
+
+
+   let number = 28;
+    let sum = 0;
+
+    for (let i = 1; i < number; i++) {
+        if (number % i === 0) {
+            sum += i;
+        }
+    }
+
+    if (sum === number) {
+        console.log(number + " is a perfect number");
+    } else {
+        console.log(number + " is not a perfect number");
+    }
+
+    </script>
+</body>
+
+</html>

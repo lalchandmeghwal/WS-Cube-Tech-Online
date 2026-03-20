@@ -1,0 +1,889 @@
+❓ Question 1: Sum of Array
+let arr = [2,4,6];
+let sum = 0;
+
+for(let i=0;i<arr.length;i++){
+  sum += arr[i];
+}
+
+console.log(sum);
+A) 10
+B) 12
+C) 14
+D) Error
+
+
+
+
+❓ Question 2: Largest Number.
+let arr = [3,7,2,9];
+let max = arr[0];
+
+for(let i=1;i<arr.length;i++){
+  if(arr[i] > max){
+    max = arr[i];
+  }
+}
+
+console.log(max);
+A) 7
+B) 9
+C) 3
+D) Error
+
+
+
+❓ Question 3: Reverse Array.
+let arr = [5,10,15];
+let rev = [];
+
+for(let i = arr.length-1; i >= 0; i--){
+  rev.push(arr[i]);
+}
+
+console.log(rev);
+A) [15,10,5]
+B) [5,10,15]
+C) [10,15,5]
+D) Error
+
+
+
+❓ Question 4: Count Even Numbers.
+let arr = [2,5,8,7,6];
+let count = 0;
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] % 2 === 0){
+    count++;
+  }
+}
+
+console.log(count);
+A) 2
+B) 3
+C) 4
+D) Error
+
+
+❓ Question 5: Count Specific Number.
+let arr = [1,2,3,2,2,4];
+let count = 0;
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] === 2){
+    count++;
+  }
+}
+
+console.log(count);
+A) 2
+B) 3
+C) 4
+D) Error
+
+
+❓ Question 6: Find Smallest Number.
+let arr = [7,3,9,1];
+let min = arr[0];
+
+for(let i=1;i<arr.length;i++){
+  if(arr[i] < min){
+    min = arr[i];
+  }
+}
+
+console.log(min);
+A) 1
+B) 3
+C) 7
+D) Error
+
+
+❓ Question 7: Multiply All Elements.
+
+let arr = [2,3,4];
+let result = 1;
+
+for(let i=0;i<arr.length;i++){
+  result *= arr[i];
+}
+
+console.log(result);
+A) 9
+B) 12
+C) 24
+D) Error
+
+
+
+❓ Question 8: Find Index of Element.
+let arr = [10,20,30,40];
+let index = -1;
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] === 30){
+    index = i;
+  }
+}
+
+console.log(index);
+A) 1
+B) 2
+C) 3
+D) -1
+
+
+❓ Question 9: Remove Duplicates (Count Unique Elements).
+let arr = [1,2,2,3,3,4];
+let unique = [];
+
+for(let i=0;i<arr.length;i++){
+  if(!unique.includes(arr[i])){
+    unique.push(arr[i]);
+  }
+}
+
+console.log(unique.length);
+A) 2
+B) 3
+C) 4
+D) 5
+
+
+
+❓ Question 10: Second Largest Number
+let arr = [10,20,4,45,99];
+let sorted = [...new Set(arr)].sort((a,b)=>b-a);
+
+console.log(sorted[1]);
+A) 45
+B) 20
+C) 99
+D) 10
+
+
+❓ Question 11: Rotate Array Right by 1
+let arr = [1,2,3,4];
+arr.unshift(arr.pop());
+console.log(arr);
+A) [4,1,2,3]
+B) [2,3,4,1]
+C) [1,2,3,4]
+D) Error
+
+
+❓ Question 12: Sum of Even Numbers.
+let arr = [1,2,3,4,5,6];
+let sum = 0;
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] % 2 === 0){
+    sum += arr[i];
+  }
+}
+
+console.log(sum);
+
+A) 10
+B) 12
+C) 8
+D) 6
+
+
+❓ Question 13: Check if Array Contains a Number.
+let arr = [5,10,15,20];
+let found = false;
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] === 15){
+    found = true;
+  }
+}
+
+console.log(found);
+A) true
+B) false
+C) undefined
+D) Error
+
+
+❓ Question 14: Count Odd Numbers.
+let arr = [1,2,3,4,5,6,7];
+let count = 0;
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] % 2 !== 0){
+    count++;
+  }
+}
+
+console.log(count);
+A) 3
+B) 4
+C) 5
+D) 6
+
+
+❓ Question 15: Remove Specific Element.
+let arr = [1,2,3,4,5];
+let result = [];
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] !== 3){
+    result.push(arr[i]);
+  }
+}
+
+console.log(result);
+A) [1,2,3,4,5]
+B) [1,2,4,5]
+C) [3,4,5]
+D) [1,2,3]
+
+
+❓ Question 16: Find Second Smallest Number.
+let arr = [8,3,5,1,7];
+let sorted = [...new Set(arr)].sort((a,b)=>a-b);
+console.log(sorted[1]);
+A) 1
+B) 3
+C) 5
+D) 7
+
+
+❓ Question 17: Count Numbers Greater Than 5.
+let arr = [2,6,4,8,10];
+let count = 0;
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] > 5){
+    count++;
+  }
+}
+
+console.log(count);
+
+A) 2
+B) 3
+C) 4
+D) 5
+
+
+❓ Question 18: Sum of Odd Numbers.
+let arr = [1,2,3,4,5];
+let sum = 0;
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] % 2 !== 0){
+    sum += arr[i];
+  }
+}
+
+console.log(sum);
+A) 9
+B) 8
+C) 7
+D) 6
+
+
+❓ Question 19: Find Maximum Using Loop.
+
+let arr = [12,7,22,5];
+let max = arr[0];
+
+for(let i=1;i<arr.length;i++){
+  if(arr[i] > max){
+    max = arr[i];
+  }
+}
+
+console.log(max);
+A) 12
+B) 22
+C) 7
+D) 5
+
+
+❓ Question 20: Find Minimum Using Loop.
+
+let arr = [15,8,22,3,10];
+let min = arr[0];
+
+for(let i=1;i<arr.length;i++){
+  if(arr[i] < min){
+    min = arr[i];
+  }
+}
+
+console.log(min);
+A) 3
+B) 8
+C) 10
+D) 15
+
+
+❓ Question 21: Count Numbers Divisible by 3.
+let arr = [3,6,7,9,10];
+let count = 0;
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] % 3 === 0){
+    count++;
+  }
+}
+
+console.log(count);
+A) 2
+B) 3
+C) 4
+D) 5
+
+
+❓ Question 22: Reverse Array.
+let arr = [10,20,30,40];
+let rev = [];
+
+for(let i = arr.length-1; i >= 0; i--){
+  rev.push(arr[i]);
+}
+
+console.log(rev);
+A) [40,30,20,10]
+B) [10,20,30,40]
+C) [20,30,40,10]
+D) Error
+
+
+❓ Question 23: Find Second Largest Number.
+let arr = [5,10,20,15];
+let sorted = [...new Set(arr)].sort((a,b)=>b-a);
+console.log(sorted[1]);
+A) 10
+B) 15
+C) 20
+D) 5
+
+
+❓ Question 24: Count Even Numbers.
+let arr = [1,2,3,4,6];
+let count = 0;
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i] % 2 === 0){
+    count++;
+  }
+}
+
+console.log(count);
+A) 2
+B) 3
+C) 4
+D) Error
+
+
+❓ Question 27: Merge Two Arrays.
+let a = [1,2,3];
+let b = [4,5,6];
+let c = [];
+
+for(let i=0;i<a.length;i++){
+  c.push(a[i]);
+}
+
+for(let i=0;i<b.length;i++){
+  c.push(b[i]);
+}
+
+console.log(c);
+A) [1,2,3]
+B) [4,5,6]
+C) [1,2,3,4,5,6]
+D) [1,2,3,1,2,3]
+
+
+❓ Question 27: Square of Each Element.
+let arr = [2,3,4];
+let squares = [];
+
+for(let i=0;i<arr.length;i++){
+  squares.push(arr[i]*arr[i]);
+}
+
+console.log(squares);
+A) [2,3,4]
+B) [4,9,16]
+C) [8,27,64]
+D) [1,4,9]
+
+
+❓ Question 28: Find Common Elements Between Two Arrays.
+const a1 = [1, 2, 3, 4];
+const a2 = [3, 4, 5, 6];
+
+for (let value of a1) {
+    if (a2.includes(value)) {
+        console.log(value);
+    }
+}
+
+A) 1,2
+B) 3,4
+C) 5,6
+D) 1,2,3,4
+
+
+❓ Question 29: Filter Array Starting With Vowel.
+let arr2 = [
+    'apple', 'Banana', 'orange', 'Umbrella', 'elephant',
+    'ice', 'Owl', 'egg', 'Idea', 'ocean',
+    'Ink', 'envelope', 'Island', 'ant', 'eagle',
+    'orchid', 'unit', 'opera', 'arrow', 'urban',
+    'cat', 'Zebra', 'dog', 'monkey', 'Tiger'
+];
+
+const newArr = [];
+const vowelChar = 'aeiou';
+
+for (const value of arr2) {
+    if (vowelChar.includes(value[0].toLowerCase())) {
+        newArr.push(value);
+    }
+}
+
+console.log(newArr);
+
+
+❓ Question 30: Pop All Elements from Array.
+const arr = [1, 2, 3, 4, 5];
+
+for (let value of arr) {
+    arr.pop();
+}
+
+console.log(arr);
+A) [1,2,3,4,5]
+B) []
+C) [1,2]
+D) Error
+
+
+❓ Question 31: Assign Array Value in Loop.
+const z = [1,2,3,4];
+
+for(let value of z){
+    z[3] = value;
+}
+
+console.log(z);
+A) [1,2,3,1]
+B) [1,2,3,4]
+C) [4,4,4,4]
+D) [1,1,1,1]
+
+❓ Question 32: Find All Words Ending With 'e'
+const words = ['apple', 'banana', 'orange', 'cake', 'ice', 'mango'];
+const result = [];
+
+for (let word of words) {
+    if (word[word.length-1] === 'e') {
+        result.push(word);
+    }
+}
+
+console.log(result);
+A) ['apple','orange','ice']
+B) ['banana','mango']
+C) ['cake','mango']
+D) ['apple','banana','cake']
+
+
+❓ Question 33: Count Words Starting and Ending With Same Letter.
+const words = ['level', 'apple', 'radar', 'banana', 'civic', 'dog'];
+let count = 0;
+
+for (let word of words) {
+    if (word[0] === word[word.length-1]) {
+        count++;
+    }
+}
+
+console.log(count);
+A) 2
+B) 3
+C) 4
+D) 5
+
+
+❓ Question 34: Find All Strings Containing 'an'.
+const arr = ['banana', 'apple', 'mango', 'orange', 'grape'];
+const result = [];
+
+for (let str of arr) {
+    if (str.includes('an')) {
+        result.push(str);
+    }
+}
+
+console.log(result);
+A) ['banana','mango','orange']
+B) ['apple','grape']
+C) ['banana','apple']
+D) ['mango','grape']
+
+
+
+❓ Question 35: Convert All Strings to Uppercase.
+const arr = ['apple', 'banana', 'mango'];
+const upperArr = [];
+
+for (let str of arr) {
+    upperArr.push(str.toUpperCase());
+}
+
+console.log(upperArr);
+
+A) ['APPLE','BANANA','MANGO']
+B) ['apple','banana','mango']
+C) ['Apple','Banana','Mango']
+D) ['APPLE','BANANA']
+
+❓ Question 36: Filter Numbers Greater Than 5.
+const numbers = [2,5,6,8,1,9];
+const result = [];
+
+for (let num of numbers) {
+    if (num > 5) {
+        result.push(num);
+    }
+}
+
+console.log(result);
+A) [2,5,1]
+B) [6,8,9]
+C) [5,6,8]
+D) [2,1]
+
+
+
+
+❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+Array Methods Question
+❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+
+
+❓ Question 1: Use push() to Add Elements
+const arr = [1,2,3];
+arr.push(4,5);
+console.log(arr);
+A) [1,2,3]
+B) [1,2,3,4]
+C) [1,2,3,4,5]
+D) [4,5]
+
+
+❓ Question 2: Use pop() to Remove Last Element.
+const arr = [10,20,30,40];
+arr.pop();
+console.log(arr);
+A) [10,20,30,40]
+B) [10,20,30]
+C) [20,30,40]
+D) [10,20,40]
+
+
+❓ Question 3: Use shift() to Remove First Element
+const arr = [5,10,15,20];
+arr.shift();
+console.log(arr);
+A) [5,10,15,20]
+B) [10,15,20]
+C) [5,15,20]
+D) [15,20]
+
+
+❓ Question 4: Use unshift() to Add Element at Start
+const arr = [2,3,4];
+arr.unshift(0,1);
+console.log(arr);
+A) [2,3,4]
+B) [0,1,2,3,4]
+C) [2,3,4,0,1]
+D) [0,2,3,4]
+
+
+❓ Question 5: Use indexOf() to Find Element.
+const arr = [10,20,30,40];
+console.log(arr.indexOf(30));
+A) 0
+B) 1
+C) 2
+D) 3
+
+
+❓ Question 6: Use includes() to Check Existence.
+const arr = [5,10,15,20];
+console.log(arr.includes(15));
+A) true
+B) false
+C) undefined
+D) Error
+
+
+❓ Question 7: Use slice() to Get Subarray.
+const arr = [1,2,3,4,5];
+console.log(arr.slice(1,4));
+A) [1,2,3]
+B) [2,3,4]
+C) [3,4,5]
+D) [1,2,3,4]
+
+
+❓ Question 8: Use splice() to Remove Elements.
+const arr = [10,20,30,40,50];
+arr.splice(2,2);
+console.log(arr);
+A) [10,20,30,40,50]
+B) [10,20,50]
+C) [30,40]
+D) [10,20,40,50]
+
+
+
+❓ Question 9: Use join() to Convert Array to String.
+const arr = ['a','b','c','d'];
+console.log(arr.join('-'));
+A) 'abcd'
+B) 'a-b-c-d'
+C) ['a','b','c','d']
+D) 'a,b,c,d'
+
+
+❓ Question 10: Use reverse() to Reverse Array.
+const arr = [1,2,3,4,5];
+arr.reverse();
+console.log(arr);
+A) [1,2,3,4,5]
+B) [5,4,3,2,1]
+C) [2,3,4,5,1]
+D) [1,2,3,5,4]
+
+
+
+❓ Question 11: Use filter() to Get Even Numbers.
+const arr = [1,2,3,4,5,6];
+const evens = arr.filter(num => num % 2 === 0);
+console.log(evens);
+A) [1,3,5]
+B) [2,4,6]
+C) [1,2,3,4,5,6]
+D) []
+
+
+❓ Question 12: Use map() to Double Numbers.
+const arr = [1,2,3,4];
+const doubled = arr.map(num => num * 2);
+console.log(doubled);
+A) [1,2,3,4]
+B) [2,4,6,8]
+C) [1,4,9,16]
+D) [0,2,4,6]
+
+
+❓ Question 13: Use reduce() to Sum All Numbers.
+const arr = [1,2,3,4,5];
+const sum = arr.reduce((total, num) => total + num, 0);
+console.log(sum);
+A) 10
+B) 15
+C) 12
+D) 5
+
+
+❓ Question 14: Use some() to Check Condition.
+const arr = [1,2,3,4,5];
+const hasEven = arr.some(num => num % 2 === 0);
+console.log(hasEven);
+A) true
+B) false
+C) undefined
+D) Error
+
+
+
+❓ Question 15: Use every() to Check Condition.
+const arr = [2,4,6,8];
+const allEven = arr.every(num => num % 2 === 0);
+console.log(allEven);
+A) true
+B) false
+C) undefined
+D) Error
+
+
+❓ Question 16: Use find() to Get First Even Number.
+const arr = [1,3,5,6,7];
+const firstEven = arr.find(num => num % 2 === 0);
+console.log(firstEven);
+A) 1
+B) 3
+C) 5
+D) 6
+
+
+
+❓ Question 17: Use findIndex() to Get Index of First Even Number
+const arr = [1,3,5,6,7];
+const index = arr.findIndex(num => num % 2 === 0);
+console.log(index);
+A) 0
+B) 3
+C) 2
+D) 5
+
+
+
+❓ Question 18: Use concat() to Merge Two Arrays.
+const arr1 = [1,2,3];
+const arr2 = [4,5,6];
+const merged = arr1.concat(arr2);
+console.log(merged);
+A) [1,2,3]
+B) [4,5,6]
+C) [1,2,3,4,5,6]
+D) [[1,2,3],[4,5,6]]
+
+
+
+❓ Question 19: Use sort() to Sort Numbers
+const arr = [40,10,30,20];
+arr.sort((a,b) => a - b);
+console.log(arr);
+A) [10,20,30,40]
+B) [40,30,20,10]
+C) [20,10,30,40]
+D) [10,30,20,40]
+
+
+❓ Question 20: Use reverse() After sort()
+const arr = [3,1,4,2];
+arr.sort((a,b) => a - b);
+arr.reverse();
+console.log(arr);
+A) [1,2,3,4]
+B) [4,3,2,1]
+C) [3,1,4,2]
+D) [2,1,3,4]
+
+
+
+❓ Question 21: Use fill() to Fill Array
+const arr = [1,2,3,4,5];
+arr.fill(0, 1, 4);
+console.log(arr);
+
+A) [0,0,0,0,5]
+B) [1,0,0,0,5]
+C) [0,1,2,3,4]
+D) [1,2,3,4,5]
+
+
+❓ Question 22: Use flat() to Flatten Array
+const arr = [1, [2,3], [4, [5,6]]];
+const flatArr = arr.flat(2);
+console.log(flatArr);
+
+A) [1,2,3,4,[5,6]]
+B) [1,2,3,4,5,6]
+C) [1, [2,3], [4, [5,6]]]
+D) [1,2,3]
+
+
+❓ Question 23: Use splice() to Insert Elements
+const arr = [1,2,5,6];
+arr.splice(2,0,3,4);
+console.log(arr);
+
+A) [1,2,3,4,5,6]
+B) [1,2,5,6]
+C) [3,4,1,2,5,6]
+D) [1,2,5,3,4,6]
+
+
+❓ Question 24: Use toString() to Convert Array to String
+const arr = [1,2,3,4];
+console.log(arr.toString());
+
+A) [1,2,3,4]
+B) '1,2,3,4'
+C) '1234'
+D) [1,2,3,4]
+
+
+❓ Question 25: Use includes() With Strings
+const arr = ['apple','banana','mango'];
+console.log(arr.includes('Banana'));
+
+A) true
+B) false
+C) Error
+D) undefined
+
+
+❓ Question 26: Use Array.from() to Create Array from String
+const str = "hello";
+const arr = Array.from(str);
+console.log(arr);
+
+A) ['h','e','l','l','o']
+B) ['hello']
+C) ['h','e','l','o']
+D) ['h','e','l','l']
+
+
+
+❓ Question 27: Use copyWithin() to Copy Elements
+const arr = [1,2,3,4,5];
+arr.copyWithin(0,3,5);
+console.log(arr);
+
+A) [4,5,3,4,5]
+B) [1,2,3,4,5]
+C) [3,4,5,4,5]
+D) [4,5,1,2,3]
+
+
+❓ Question 28: Use entries() to Get Index-Value Pairs
+const arr = ['a','b','c'];
+for (const [index, value] of arr.entries()) {
+    console.log(index, value);
+}
+
+A) 0 a, 1 b, 2 c
+B) a 0, b 1, c 2
+C) ['a','b','c']
+D) [[0,'a'],[1,'b'],[2,'c']]
+
+
+❓ Question 29: Use keys() to Get Indexes
+const arr = ['x','y','z'];
+for (const key of arr.keys()) {
+    console.log(key);
+}
+
+A) x,y,z
+B) 0,1,2
+C) ['x','y','z']
+D) ['0','1','2']
+
+
+❓ Question 30: Use values() to Get Values
+const arr = ['x','y','z'];
+for (const value of arr.values()) {
+    console.log(value);
+}
+
+A) 0,1,2
+B) x,y,z
+C) ['x','y','z']
+D) ['0','1','2']

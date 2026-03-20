@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Loaders</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+        rotate: 0deg;
+    }
+    100%{
+        transform: rotate(360deg);
+        /* rotate: 360deg; */
+    }
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent);
+}
+
+.loader {
+
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+}
+
+.loader::before,
+.loader2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #00fff966);
+    background-size: 100px 180px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+
+.loader2,
+.loader4 {
+    animation-delay: -1s;
+    filter: hue-rotate(290deg);
+}
+
+.loader i {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00fff9;
+    background: pink;
+    border-radius: 50%;
+    z-index: 100;
+    box-shadow:
+        0 0 10px #60dddb,
+        0 0 20px #60dddb,
+        0 0 30px #60dddb,
+        0 0 40px #60dddb,
+        0 0 50px #60dddb,
+        0 0 60px #60dddb,
+        0 0 70px #60dddb,
+        0 0 80px #60dddb,
+        0 0 90px #60dddb,
+        0 0 100px #60dddb ;
+}
+
+.loader span {
+    position: absolute;
+    inset: 20px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+.container2 .loader1::before,
+.container2 .loader2::before {
+    background: linear-gradient(to top, transparent, #faa99c80);
+
+}
+
+
+.container2 .loader2,
+.container2 .loader4 {
+    animation-delay: -1s;
+    filter: hue-rotate(290deg);
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="loader loader1"><span></span></div>
+        <div class="loader loader2"><span></span></div>
+        <div class="loader loader3"><i></i></div>
+        <div class="loader loader4"><i></i></div>
+    </div>
+
+    <div class="container container2">
+        <div class="loader loader1"><span></span></div>
+        <div class="loader loader2"><span></span></div>
+        <div class="loader loader3"><i></i></div>
+        <div class="loader loader4"><i></i></div>
+    </div>
+</body>
+
+</html>
