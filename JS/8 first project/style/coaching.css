@@ -1,0 +1,126 @@
+/* Law Prep Tutorial Kolkata */
+
+
+
+.coaching {
+    width: 100%;
+    background-image: url('https://lawpreptutorialkolkata.com/wp-content/themes/LawprepKolkata/image/about-bgcolor.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    color: black;
+
+}
+
+.coaching .left {
+    width: 100%;
+}
+
+.coaching .left img {
+    width: 100%;
+}
+
+
+.coaching .container {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+    margin-top: 5rem;
+    color: black;
+}
+
+.coaching .container .right {
+    width: 100%;
+}
+
+.coaching .container .right h3 {
+    color: #f24223;
+    font-size: 25px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+.coaching .container .right h2 {
+    color: black;
+    margin: 1rem 0;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.coaching .container .CLATContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 1rem;
+}
+
+.coaching .container .CLAt {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+
+.coaching .container .CLAt h4 {
+    font-size: 20px;
+}
+
+.coaching .container .CLAt p {
+    margin: 5px 0;
+    font-size: 17px;
+    line-height: 25px;
+    opacity: 0.6;
+    letter-spacing: 0.8px;
+}
+
+
+@media (width <=990px) {
+    .coaching .container {
+        max-width: 800px;
+
+        padding: 10px;
+        margin: auto;
+    }
+
+    .coaching .container {
+        flex-direction: column-reverse;
+
+    }
+
+    .coaching .left {
+        width: 100%;
+    }
+
+    .coaching .left img {
+        width: 100%;
+    }
+}
+
+
+
+@media (width <=640px) {
+
+.coaching .container .right h3{
+text-align: center;
+}
+    .coaching .container .right h2 {
+        margin: 0.5rem 0;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .coaching .container .CLAt {
+        border: 1px solid #ccc;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+       
+    }
+
+
+
+}

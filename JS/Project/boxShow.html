@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Box</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+
+            box-sizing: border-box;
+        }
+
+        .box {
+            height: 300px;
+            width: 30%;
+            background: white;
+
+            box-shadow: 0 0 2px rgb(212, 208, 208);
+            position: absolute;
+            left: 50%;
+            top: -1000px;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s linear;
+
+        }
+
+        h1 {
+            text-align: center;
+            /* background: #000; */
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 0;
+        }
+
+        h1 span {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            font-weight: bold;
+        }
+
+        .active {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Show Model</button>
+    <button class="bg">Change BG color</button>
+
+    <div class="box">
+        <h1>Enquire Now <span>&times;</span></h1>
+
+    </div>
+
+
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+    <button id="toggle">Toggle</button>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto commodi, pariatur fuga deleniti amet quidem
+        maiores et ab quis voluptatem hic aliquid nisi laboriosam facere quod harum perferendis incidunt explicabo.</p>
+
+    <script>
+        const button = document.querySelector('button');
+        const span = document.querySelector('span');
+        const box = document.querySelector('.box');
+        const bg = document.querySelector('.bg');
+        console.log(box)
+
+
+        button.addEventListener('click', () => {
+            box.style.top = '50%';
+        });
+
+        span.addEventListener('click', () => {
+            box.style.top = '-1000px';
+        });
+
+        const body = document.body;
+        bg.addEventListener('click', () => {
+            const r = parseInt(Math.random() * 255);
+            const g = parseInt(Math.random() * 255);
+            const b = parseInt(Math.random() * 255);
+            const color = `rgb(${r}, ${g}, ${b})`;
+            body.style.background = color;
+        });
+
+
+        const add = document.querySelector('#add')
+        console.log(add)
+        const remove = document.querySelector('#remove')
+        const toggle = document.querySelector('#toggle')
+        const p = document.querySelector('p');
+
+        add.addEventListener('click', () => {
+            p.classList.add('active')
+           
+        })
+
+        remove.addEventListener('click', () => {
+            p.classList.remove('active')
+        })
+        toggle.addEventListener('click', () => {
+            p.classList.toggle('active')
+        })
+    </script>
+
+</body>
+
+
+</html>

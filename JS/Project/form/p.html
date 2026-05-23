@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Calculator App</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .container {
+            width: 350px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: darkblue;
+        }
+
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Interest Calculator -->
+    <div class="container">
+        <h2>Interest Calculator</h2>
+        <input type="number" id="principal" placeholder="Principal Amount">
+        <input type="number" id="rate" placeholder="Rate (%)">
+        <input type="number" id="time" placeholder="Time (years)">
+        <button onclick="calculateInterest()">Calculate</button>
+        <div class="result" id="interestResult"></div>
+    </div>
+
+    <!-- BMI Calculator -->
+    <div class="container">
+        <h2>BMI Calculator</h2>
+        <input type="number" id="weight" placeholder="Weight (kg)">
+        <input type="number" id="height" placeholder="Height (meters)">
+        <button onclick="calculateBMI()">Calculate</button>
+        <div class="result" id="bmiResult"></div>
+    </div>
+
+    <!-- Calories Calculator -->
+    <div class="container">
+        <h2>Calories Calculator</h2>
+        <input type="number" id="age" placeholder="Age">
+        <input type="number" id="calWeight" placeholder="Weight (kg)">
+        <input type="number" id="calHeight" placeholder="Height (cm)">
+        <button onclick="calculateCalories()">Calculate</button>
+        <div class="result" id="calorieResult"></div>
+    </div>
+
+    <script>
+        // Interest Calculator (Simple Interest)
+        function calculateInterest() {
+            let p = document.getElementById("principal").value;
+            let r = document.getElementById("rate").value;
+            let t = document.getElementById("time").value;
+
+            let interest = (p * r * t) / 100;
+            document.getElementById("interestResult").innerText =
+                "Interest = " + interest;
+        }
+
+        // BMI Calculator
+        function calculateBMI() {
+            let w = document.getElementById("weight").value;
+            let h = document.getElementById("height").value;
+
+            let bmi = w / (h * h);
+            document.getElementById("bmiResult").innerText =
+                "BMI = " + bmi.toFixed(2);
+        }
+
+        // Calories Calculator (Simple Formula)
+        function calculateCalories() {
+            let age = document.getElementById("age").value;
+            let weight = document.getElementById("calWeight").value;
+            let height = document.getElementById("calHeight").value;
+
+            let calories = 10 * weight + 6.25 * height - 5 * age + 5;
+            document.getElementById("calorieResult").innerText =
+                "Calories Needed = " + calories + " kcal/day";
+        }
+    </script>
+
+</body>
+
+</html>

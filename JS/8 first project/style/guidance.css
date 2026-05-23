@@ -1,0 +1,388 @@
+.guidance {
+    width: 100%;
+    background: #fff7f2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.guidance .left img {
+    width: 100%;
+}
+
+.guidance .right h3 {
+    color: #ed1b23;
+    font-size: 25px;
+    margin: 1rem 0;
+}
+
+.guidance .right h2 {
+    font-size: 40px;
+    margin: 1rem 0;
+    opacity: 0.7;
+}
+
+.guidance .right .cartContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    row-gap: 3rem;
+    margin-top: 1rem;
+}
+
+.guidance .right .cart {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.guidance .right .cart h4 {
+    font-size: 18px;
+}
+
+.guidance .right .cart p {
+    margin: 1rem 0;
+    line-height: 25px;
+    opacity: 0.8;
+    font-weight: bolder;
+}
+
+
+
+/* Our CLAT Toppers */
+
+.toppers {
+    width: 100%;
+    /* height: 100vh; */
+    background: #0f1c44;
+    padding: 1rem;
+}
+
+.toppers h3 {
+    color: #ed1b23;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 25px;
+    word-spacing: 2px;
+    letter-spacing: 1.5px;
+}
+
+.toppers h2 {
+    text-align: center;
+    margin: 1rem;
+    font-size: 40px;
+    color: white;
+}
+
+.toppers .cartContainer {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    /* horizontal scroll */
+    overflow-y: hidden;
+    /* vertical hide */
+    padding: 1rem;
+}
+
+.toppers .cartContainer::-webkit-scrollbar {
+    display: none;
+    /* horizontal scrollbar height */
+}
+
+.toppers .cartContainer:hover {
+    cursor: grab;
+}
+
+
+.toppers .cartContainer .cart {
+    width: 300px;
+
+    border: 1px solid #f4efef45;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    flex-shrink: 0;
+    /* overflow: scroll; */
+}
+
+.toppers .cartContainer .cart img {
+    margin: 1rem 0;
+}
+
+.toppers .cartContainer .cart h4 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+.toppers .cartContainer .cart p {
+    /* font-size: 18px; */
+    font-weight: lighter;
+    letter-spacing: 1px;
+    word-spacing: 1.5px;
+    margin: 10px 0;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+/* Inspired by Dreams */
+
+
+.dreams {
+    background: #f1f7fb;
+    padding: 3rem 5rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+
+
+}
+
+.dreams .left h3 {
+    color: #ed1b23;
+    font-size: 20px;
+    margin: 1rem 0;
+}
+
+.dreams .left h2 {
+    font-size: 50px;
+    margin: 1rem 0;
+    opacity: 0.7;
+}
+
+
+.dreams .left p {
+
+    margin: 2rem 0;
+    font-size: 22px;
+}
+
+.dreams .left .buttons span {
+    border: 1px solid black;
+
+    /* background: #000; */
+    padding: 12px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 0 10px #ccc;
+
+
+}
+
+.dreams .left .buttons span:last-child {
+    background: #292929;
+    color: white;
+    margin-left: 10px;
+}
+
+.dreams .right {
+    border-left: 1px solid rgb(22, 22, 22);
+    padding: 2rem;
+}
+
+.dreams .right p {
+
+    margin: 1rem 0;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+    line-height: 25px;
+    opacity: 0.7;
+
+    font-size: 20px;
+
+}
+
+.dreams .right .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dreams .right .logo img {
+    border-radius: 50%;
+    width: 60px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (width <=1277px) {
+    .guidance .right h2 {
+        font-size: 30px;
+
+    }
+}
+
+@media (width <=1125px) {
+    .dreams {
+        padding: 2rem 3rem;
+
+    }
+
+    .dreams .left h2 {
+        font-size: 40px;
+
+    }
+
+    .dreams .right p {
+        font-size: 18px;
+    }
+}
+
+@media (width <=1050px) {
+    .guidance {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 5rem;
+    }
+
+    .guidance .left {
+        order: 2;
+    }
+
+
+    .guidance .left {
+        order: 1;
+    }
+
+    .guidance .right .cartContainer {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+}
+
+@media (width <=880px) {
+    .dreams {
+        padding: 2rem 5rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .dreams .left h2 {
+        font-size: 30px;
+
+    }
+
+    .dreams .right {
+        border: none;
+        background: white;
+    }
+
+}
+
+
+@media (width <=770px) {
+    .guidance .right .cart {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+
+
+    }
+}
+
+@media (width <=670px) {
+    .guidance {
+        padding: 15px;
+    }
+
+    .guidance .right h3 {
+        font-size: 20px;
+
+    }
+
+    .guidance .right h2 {
+        font-size: 25px;
+        margin: 1rem 0;
+        opacity: 0.7;
+    }
+
+    .dreams {
+        padding: 2rem 3rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (width <=560px) {
+    .guidance .right h3 {
+        font-size: 18px;
+
+    }
+
+    .guidance .right h2 {
+        font-size: 20px;
+        margin: 1rem 0;
+        opacity: 0.7;
+    }
+
+    .toppers h2 {
+        font-size: 25px;
+    }
+
+
+    .dreams {
+        padding: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .dreams .left h2 {
+        font-size: 20px;
+
+    }
+
+    .dreams .left p {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .dreams .right {
+        border: none;
+        background: white;
+        margin-top: 10px;
+
+    }
+
+    .dreams .right p {
+        font-size: 16px;
+        line-height: 22px;
+        opacity: 1;
+        letter-spacing: normal;
+        word-spacing: normal;
+    }
+
+    .dreams .left {
+        position: relative;
+    }
+
+    .dreams .left .buttons {
+        position: absolute;
+        margin: 10px;
+        right: 0;
+
+    }
+}

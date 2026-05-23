@@ -14,13 +14,16 @@
 //     document.write('<br>');
 // }
 
-// for (let i = 1; i <= 5; i++) {
-//     for (let j = 1; j <= i; j++) {
-//         document.write(`${j} `);
-//     };
-//     document.write('<br>');
-// }
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= i; j++) {
+        document.write(`${j} `);
+    };
+    document.write('<br>');
+}
 
+let arr = [1, 2, 2]
+arr.push(arr.push());
+console.log(arr)
 // for (let i = 5; i >= 1; i--) {
 //     for (let j = i; j >= 1; j--) {
 //         document.write(" *");
@@ -80,3 +83,5 @@ for (let i = 1; i <= 4; i++){
     };
     document.write("<br>");
 }
+
+

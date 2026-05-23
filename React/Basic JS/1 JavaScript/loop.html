@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            width: 500px;
+            margin: auto;
+            padding-top: 50px;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .form-control label {
+            width: 100%;
+
+        }
+
+        .form-control select {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="form-control">
+            <label>Select Country</label>
+            <select id="country" name="country_name">
+                <option value="">Select Country</option>
+                <option value="1">India</option>
+                <option value="2">SriLanka</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label>Select State</label>
+            <select id="state" name="state_name">
+                <option>Select State</option>
+            </select>
+        </div>
+    </div>
+
+
+    <script>
+        var states = [
+            { "country_id": 1, "state": "Maharashtra" },
+            { "country_id": 1, "state": "Rajasthan" },
+            { "country_id": 1, "state": "Tamil Nadu" },
+            { "country_id": 1, "state": "Karnataka" },
+            { "country_id": 1, "state": "Uttar Pradesh" },
+
+            { "country_id": 2, "state": "Western Province" },
+            { "country_id": 2, "state": "Central Province" },
+            { "country_id": 2, "state": "Southern Province" },
+            { "country_id": 2, "state": "Northern Province" },
+            { "country_id": 2, "state": "Eastern Province" }
+        ]
+
+
+        document.getElementById('country').addEventListener('change', (event) => {
+
+            var finalStates = [];
+
+            if(event.target.value != ''){
+                finalStates = states.filter((v) => {
+                    if(v.country_id == event.target.value){
+                        return v;
+                    }
+                })
+            }
+
+            var getStates = '<option>Select State</option>';
+
+            finalStates.forEach((v) => {
+                // getStates += '<option>'+ v.state  +'</option>';
+
+                getStates += `<option> ${ v.state } </option>`;
+
+
+                var text = '<div class="form-control"><label>Select Country</label><select id="country" name="country_name"><option value="">Select Country</option><option value="1">India</option><option value="2">SriLanka</option></select></div>';
+
+                var text = `<div class="form-control">
+                    <label>Select Country</label>
+                    <select id="country" name="country_name">
+                        <option value="">Select Country</option>
+                        <option value="1">India</option>
+                        <option value="2">SriLanka</option>
+                    </select>
+                </div>`;
+            })
+
+            document.getElementById('state').innerHTML = getStates;
+
+            console.log(finalStates);
+
+        })
+    </script>
+</body>
+
+</html>

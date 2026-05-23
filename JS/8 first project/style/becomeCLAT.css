@@ -1,0 +1,243 @@
+.becomeCLAT {
+
+    width: 100%;
+    background: #f4f6fa;
+    margin-top: 2rem;
+    padding: 3rem 0;
+}
+
+.becomeCLAT h2 {
+    text-align: center;
+    margin-top: 1rem;
+    color: red;
+
+}
+
+.becomeCLAT h1 {
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.becomeCLAT .container {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.becomeCLAT .container .cart {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    color: rgb(152, 34, 34);
+    transition: all 0.5s linear;
+}
+
+.becomeCLAT .container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.5s linear;
+}
+
+.becomeCLAT .container .cart::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 25, 25, 0.2);
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: all 0.5s linear;
+    cursor: pointer;
+}
+
+.becomeCLAT .container .cart:hover::after {
+    opacity: 0;
+
+}
+
+.becomeCLAT .container .cart:hover img {
+    scale: calc(1.1);
+    cursor: pointer;
+}
+
+.becomeCLAT .container .cart .dis {
+    position: absolute;
+    z-index: 20;
+    color: white;
+    padding: 20px;
+    bottom: 10px;
+}
+
+.becomeCLAT .container i {
+    color: rgb(170, 9, 9);
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.becomeCLAT .container h4 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+.becomeCLAT .container p {
+    margin: 10px 0;
+}
+
+.becomeCLAT .container h3 {
+
+    transition: all 0.5 linear;
+    opacity: 0;
+}
+
+.becomeCLAT .container .cart:hover h3 {
+
+    opacity: 1;
+}
+
+
+.scholarship {
+    width: 100%;
+    background: #111d5f;
+    display: flex;
+    gap: 1rem;
+    padding: 5rem;
+    position: relative;
+}
+
+.scholarship .left h2 {
+    color: white;
+    font-size: 50px;
+    line-height: 60px;
+
+}
+
+.scholarship .left button {
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    margin-top: 1rem;
+    border-radius: 0px 15px 0px 15px;
+    background: #ed1b23;
+    border: none;
+    cursor: pointer;
+}
+
+.scholarship .right p {
+    color: white;
+    margin: 1rem 0;
+    font-size: 20px;
+    line-height: 30px;
+    word-spacing: 3px;
+}
+
+.scholarship .right .imag {
+
+    max-width: 700px;
+
+}
+
+.scholarship .right .imag img {
+    width: 100%;
+}
+
+#scholarshipMarquee {
+    font-size: 50px;
+    color: #edeef2;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    display: flex;
+    gap: 5rem;
+    z-index: 10;
+}
+
+@media (width <=1100px) {
+    .becomeCLAT .container {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 10rem;
+
+    }
+}
+
+@media (width <=1100px) {
+    .scholarship {
+        flex-direction: column;
+    }
+}
+
+@media (width <=940px) {
+    .becomeCLAT .container {
+        padding: 0 5rem;
+    }
+}
+
+@media (width <=770px) {
+    .scholarship .left h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (width <=700px) {
+    .becomeCLAT .container {
+        padding: 0 1rem;
+    }
+
+    .becomeCLAT h1 {
+        font-size: 25px;
+
+    }
+
+    .becomeCLAT h2 {
+        font-size: 20px;
+
+    }
+
+
+}
+
+@media (width <=500px) {
+    .becomeCLAT .container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem;
+    }
+
+    .becomeCLAT .container .cart {
+        height: 500px;
+    }
+
+    .becomeCLAT h1 {
+        font-size: 20px;
+
+    }
+
+    .scholarship {
+        padding: 1rem;
+    }
+
+    .becomeCLAT h2 {
+        font-size: 18px;
+
+    }
+
+    .scholarship .left h2 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+        .scholarship .right p{
+            font-size: 18px;
+        }
+}

@@ -1,0 +1,255 @@
+import React, { useEffect, useState } from 'react';
+import { FaMinus, FaPlus, FaStar } from 'react-icons/fa';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router';
+import getOnePrduct from '../store/features/oneProduct/oneProductThunk';
+import { addToCart, changeQty, removeToCart } from '../store/features/cart/cartSlice';
+import Loading from '../components/Loading';
+import { ToastContainer, toast } from 'react-toastify'
+import Swal from 'sweetalert2';
+
+const oneoneProductDetails = () => {
+
+    const [showImg, setShowImg] = useState(null);
+
+    const urlId = useParams().id;
+    const dispatch = useDispatch();
+
+    const { oneProduct, error, loading } = useSelector(state => state.oneProduct);
+
+
+
+
+    useEffect(() => {
+        dispatch(getOnePrduct(urlId));
+    }, [urlId]);
+
+
+
+    const cart = useSelector(state => state.cart.cart);
+
+    const { thumbnail, title, price, brand, rating, id, } = oneProduct;
+
+    const checkItemInCart = cart.find(items => items.id === id);
+
+
+
+    const addToCartInCart = () => {
+        dispatch(addToCart({ thumbnail, title, price, brand, rating, id, qty: 1 }));
+    };
+
+    const removeToCartInItem = () => {
+        dispatch(removeToCart(id));
+        toast.success('Remove in Cart')
+    };
+
+
+    let finalQty = checkItemInCart?.qty || 1;
+    const removeQtyItem = (type) => {
+        if (type === "+") {
+            finalQty += 1;
+
+            // toast.success('Qty Added!');
+        } else {
+            if (finalQty > 1) {
+
+                finalQty -= 1;
+                // toast.success('Qty Remove!');
+            } else {
+                Swal.fire({
+                    title: "Are you sure you want to delete the item?",
+                    showDenyButton: true,
+                    showCancelButton: true,
+                    confirmButtonText: "Save",
+                    denyButtonText: `Don't save`
+                }).then((result) => {
+
+                    if (result.isConfirmed) {
+                        Swal.fire("Item Delete Successfully", "", "success");
+                        dispatch(removeToCart(id));
+                    }
+                    else if (result.isDenied) Swal.fire("Delete Cancelled", "", "info");
+                });
+            };
+
+        };
+
+
+        dispatch(changeQty({ id, finalQty }));
+    };
+
+
+
+
+    return (
+
+        <div>
+            <ToastContainer position='top-center' />
+
+            {loading ? <div className=' flex justify-center mt-10 ' >
+                <Loading />
+            </div> :
+                <div className="max-w-7xl mx-auto p-5">
+
+
+                    {/* Top Section */}
+                    <div className="flex flex-col lg:flex-row gap-10 bg-white shadow-lg rounded-2xl p-6">
+
+                        {/* Left Side */}
+                        <div className="lg:w-[30%] w-full">
+
+                            <img
+                                src={showImg ? showImg : oneProduct?.images[0]}
+                                alt={oneProduct?.title}
+                                className="w-full h-100 object-contain rounded-xl bg-gray-100"
+                            />
+
+
+                            {oneProduct.images.length > 2 &&
+                                <div className='flex mt-4 ' >
+                                    {oneProduct.images.map(img => <img onMouseMove={() => setShowImg(img)} key={img} className=' w-22 ' src={img} alt="" />)}
+
+                                </div>
+                            }
+
+                        </div>
+
+                        {/* Right Side */}
+                        <div className="lg:w-[70%] w-full">
+
+                            <h1 className="text-4xl font-bold text-gray-800">
+                                {oneProduct?.title}
+                            </h1>
+
+                            <p className="text-gray-500 mt-3 leading-7">
+                                {oneProduct?.description}
+                            </p>
+
+                            <div className="mt-5 flex items-center gap-3">
+
+                                <span className="text-3xl font-bold text-blue-600">
+                                    ${oneProduct?.price}
+                                </span>
+
+                                <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
+                                    {oneProduct?.discountPercentage}% OFF
+                                </span>
+
+                            </div>
+
+                            <div className="flex items-center gap-2 mt-4">
+
+                                <FaStar className="text-yellow-500" />
+
+                                <span className="text-lg font-medium">
+                                    {oneProduct?.rating}
+                                </span>
+
+                            </div>
+
+                            <div className="mt-6 space-y-3 text-gray-700">
+
+                                <p>
+                                    <span className="font-semibold">Brand:</span> {oneProduct?.brand}
+                                </p>
+
+                                <p>
+                                    <span className="font-semibold">Category:</span> {oneProduct?.category}
+                                </p>
+
+                                <p>
+                                    <span className="font-semibold">Stock:</span> {oneProduct?.stock}
+                                </p>
+
+                                <p>
+                                    <span className="font-semibold">SKU:</span> {oneProduct?.sku}
+                                </p>
+
+                                <p>
+                                    <span className="font-semibold">Warranty:</span> {oneProduct?.warrantyInformation}
+                                </p>
+
+                                <p>
+                                    <span className="font-semibold">Shipping:</span> {oneProduct?.shippingInformation}
+                                </p>
+
+                                <p>
+                                    <span className="font-semibold">Availability:</span> {oneProduct?.availabilityStatus}
+                                </p>
+
+                            </div>
+
+
+                            {checkItemInCart ?
+                                <div className=" flex items-center  gap-2 " >
+
+                                    <FaMinus onClick={() => removeQtyItem("-")} className=' cursor-pointer' />
+                                    <button className="bg-blue-600 text-white px-3 py-1  rounded">
+                                        {finalQty}
+                                    </button>
+                                    <FaPlus onClick={() => removeQtyItem("+")} className=' cursor-pointer' />
+
+
+                                </div> :
+
+                                <button onClick={addToCartInCart} className="bg-blue-600 text-white px-3 py-1 cursor-pointer rounded">
+                                    ADD
+                                </button>
+                            }
+
+                        </div>
+
+                    </div>
+
+                    {/* Reviews Section */}
+
+                    <div className="mt-10 bg-white shadow-lg rounded-2xl p-6">
+
+                        <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                            Customer Reviews
+                        </h2>
+
+                        <div className="space-y-5">
+
+                            {
+                                oneProduct.reviews.map((review, index) => (
+                                    <div
+                                        key={index}
+                                        className="border border-gray-200 rounded-xl p-5"
+                                    >
+
+                                        <div className="flex items-center justify-between">
+
+                                            <h3 className="text-lg font-semibold">
+                                                {review.reviewerName}
+                                            </h3>
+
+                                            <div className="flex items-center gap-1">
+
+                                                <FaStar className="text-yellow-500" />
+
+                                                <span>{review.rating}</span>
+
+                                            </div>
+
+                                        </div>
+
+                                        <p className="text-gray-600 mt-3">
+                                            {review.comment}
+                                        </p>
+
+                                    </div>
+                                ))
+                            }
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+        </div>
+    );
+};
+
+export default oneoneProductDetails;
+

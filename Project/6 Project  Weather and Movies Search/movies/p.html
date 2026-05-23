@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Translate Website</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: black;
+            color: white;
+        }
+
+        select {
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h2>My Website</h2>
+
+        <!-- Language Select -->
+        <select id="langSelect" onchange="changeLang()">
+            <option value="">Select Language</option>
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ur">Urdu</option>
+            <option value="fr">French</option>
+        </select>
+    </header>
+
+    <h1>Welcome to my website</h1>
+    <p>This is a sample paragraph for translation.</p>
+
+    <!-- Google Translate Element -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        }
+
+        // Change Language
+        function changeLang() {
+            let lang = document.getElementById("langSelect").value;
+
+            let select = document.querySelector(".goog-te-combo");
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event("change"));
+            }
+        }
+    </script>
+
+    <!-- Google Script -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

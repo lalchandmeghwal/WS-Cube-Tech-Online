@@ -1,0 +1,526 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    /* position: fixed; */
+    z-index: 1000;
+    width: 100%;
+    top: 30px;
+    background: white;
+    transition: all 0.2s linear;
+}
+
+
+header ul li:hover {
+    background: #123062;
+
+}
+
+header ul li:hover a {
+    color: white !important;
+}
+
+header .enquireBtn {
+    background: #123062;
+
+    border-radius: 20px;
+    padding: 8px 30px;
+    /* box-shadow: 0 0  20px #123062; */
+
+    animation: enquireBtnAni 1s linear infinite;
+}
+
+header .enquireBtn:hover {
+    background: #123062;
+}
+
+@keyframes enquireBtnAni {
+    to {
+        box-shadow: 0 0 0px #123062;
+    }
+
+    from {
+        box-shadow: 0 0 30px #123062;
+    }
+}
+
+
+.closeMobileMenu {
+    background: #42ab3a;
+    display: flex;
+    justify-content: end;
+    color: white !important;
+    cursor: pointer;
+}
+
+#mobileMenu {
+    background: #223d6d;
+}
+
+#mobileMenu ul>li>a {
+    color: white;
+}
+
+#discoverSolachey {
+    background: #f2f2f6;
+}
+
+#discoverSolachey h1 {
+    color: #223d6d;
+    font-weight: bold;
+}
+
+.imgBox {
+    overflow: hidden;
+}
+
+.imgBox img {
+    width: 100%;
+    transition: all 0.5s linear;
+}
+
+.imgBox:hover img {
+    scale: 1.2;
+}
+
+.imgBox figure {
+    position: relative;
+
+
+    margin: 0;
+    width: 100%;
+}
+
+.imgBox .discoverItem {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s linear;
+
+    background: rgba(32, 31, 31, 0.049);
+}
+
+.imgBox:hover .discoverItem {
+    background: rgba(32, 31, 31, 0.5);
+}
+
+
+
+.aboutUs {
+    background: #f2f2f6;
+
+}
+
+.aboutUs h2 {
+    color: #223d6d;
+    font-weight: bold;
+
+}
+
+.aboutUs p {
+    margin: 2rem 0;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.aboutUs button {
+    padding: 10px 40px;
+    border-radius: 30px;
+    border: none;
+    text-transform: uppercase;
+    background: #cccccc;
+
+}
+
+.aboutUs img {
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 10px;
+    /* animation: imgLeftToRight 1s linear infinite alternate; */
+
+
+}
+
+
+@keyframes imgLeftToRight {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+
+
+.fanSection {
+    background-image: url('../images/fan.webp');
+    height: 100vh;
+    padding: 2rem;
+    background-repeat: no-repeat;
+}
+
+.fanSection .dis {
+
+    max-width: 700px;
+    padding: 10rem 0;
+    color: white;
+
+}
+
+.fanSection .dis h5 {
+    font-style: italic;
+
+}
+
+.fanSection .dis h2 {
+    font-size: 30px;
+    padding: 1rem 0;
+    font-weight: bold;
+}
+
+.fanSection .dis p {
+    font-size: 19px;
+}
+
+.fanSection .dis button {
+    background: #123062;
+    border-radius: 30px;
+    border: 2px solid white;
+    font-size: 20px;
+    color: white;
+    padding: 5px 40px;
+    margin-top: 1rem;
+}
+
+.fanSection .dis button:hover {
+    background: white;
+    color: green;
+}
+
+.testimonial {
+    margin-bottom: 2rem;
+}
+
+.testimonial h2 {
+    text-align: center;
+    color: #223d6d;
+}
+
+.testimonial p {
+    text-align: center;
+    line-height: 30px;
+    font-size: 17px;
+}
+
+.testimonial .start {
+    color: #ffb800;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.testimonial h4 {
+    color: #223d6d;
+    text-align: center;
+    padding: 10px;
+}
+
+.blogSection {
+    margin: 2rem;
+}
+
+.blogSection h3 {
+    text-align: center;
+    color: #42ac3a;
+    font-size: 18px;
+}
+
+.blogSection h2 {
+    text-align: center;
+    color: #223d6d;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.blogSection .text-ellipsis-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-decoration: none;
+    color: #223d6d;
+    font-size: 21px;
+}
+
+.blogSection h5 a {
+    text-decoration: none;
+    color: #42ac3a;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.blogSection h5 a i {
+
+    transition: all 0.5s linear;
+    scale: 0;
+}
+
+.blogSection h5 a:hover i {
+    scale: 1;
+}
+
+
+.blogSection .myCart img {
+    transition: all 0.5s linear;
+}
+
+.blogSection .myCart:hover img {
+    scale: 1.1;
+}
+
+
+
+footer {
+    background: #f2f2f6;
+    padding: 2rem 0;
+
+}
+
+footer .footerItems {
+    padding: 2rem;
+}
+
+footer .socialMedia img {
+    background: white;
+    border-radius: 5px;
+}
+
+footer .socialMedia p {
+    text-transform: uppercase;
+    /* padding: 1rem 0; */
+    margin-top: 1rem;
+}
+
+footer .socialMedia h2 {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #223d6d;
+}
+
+footer .socialMedia .icone {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 30px;
+    color: #42ab3a;
+
+}
+
+footer .address h2 {
+    color: #223d6d;
+
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer .address h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+footer .categories h2 {
+    color: #223d6d;
+    /* margin-left: 2rem; */
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer .categories ul {
+    list-style: none;
+
+    padding-left: 0;
+
+}
+
+footer .categories ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: all 0.5s linear;
+
+}
+
+footer .categories ul a:hover {
+    margin-left: 10px;
+}
+
+footer .enquireNow h2 {
+    color: #223d6d;
+
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+footer .enquireNow input {
+    border: none;
+}
+
+footer .enquireNow input:focus {
+    box-shadow: none !important;
+}
+
+footer .enquireNow button {
+    padding: 6px 30px;
+    background: #42ac3a;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.5s linear;
+
+}
+
+footer .enquireNow button:hover {
+    opacity: 0.5;
+}
+
+.socialMediaSection {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    /* display: none; */
+}
+
+.socialMediaSection .icone {
+    background: #123062;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#enquireModel button[type="submit"] {
+    padding: 6px 30px;
+    background: #42ac3a;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.5s linear;
+}
+
+
+/* socialMediaMobile */
+
+.socialMediaMobile {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    display: flex;
+    transform: translate(-50%, 50%);
+    gap: 1rem;
+    width: 100%;
+    background: #008000;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+    /* display: none; */
+}
+
+.socialMediaMobile .icone {
+    background: #123062;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.buttomTop {
+    background: #42ac3a;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    rotate: 270deg;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.buttomTop:hover {
+    opacity: 1;
+}
+
+.sliderSection {
+    position: relative !important;
+}
+
+.prevBtnSlide {
+    background: #42ac3a;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50px;
+    top: 85%;
+    border-radius: 50%;
+
+}
+
+.nextBtnSlide {
+    background: #42ac3a;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 70px;
+    top: 85%;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+
+.circleBtn{
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px !important;
+}

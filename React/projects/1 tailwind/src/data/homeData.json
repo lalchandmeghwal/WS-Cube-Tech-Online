@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "img": "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20Red/thumbnail.png",
+        "brand": "off white",
+        "category": "mens shoes",
+        "title": "Sports Sneakers Off White Red",
+        "price": "$110",
+        "currentPrice": "$199"
+    },
+    {
+        "id": 2,
+        "img": "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20&%20Red/thumbnail.png",
+        "brand": "off white",
+        "category": "mens shoes",
+        "title": "Sports Sneakers Off White Red",
+        "price": "$120",
+        "currentPrice": "$199"
+    },
+    {
+        "id": 3,
+        "img": "https://cdn.dummyjson.com/products/images/mens-shoes/Puma%20Future%20Rider%20Trainers/thumbnail.png",
+        "brand": "puma",
+        "category": "mens shoes",
+        "title": "Puma Future Rider Trainers",
+        "price": "$90",
+        "currentPrice": "$199"
+    },
+    {
+        "id": 4,
+        "img": "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Baseball%20Cleats/thumbnail.png",
+        "brand": "nike",
+        "category": "mens shoes",
+        "title": "Nike Baseball Cleats",
+        "price": "$80",
+        "currentPrice": "$199"
+    },
+    {
+        "id": 5,
+        "img": "https://cdn.dummyjson.com/products/images/tops/Tartan%20Dress/thumbnail.png",
+        "brand": "n/a",
+        "category": "tops",
+        "title": "Tartan Dress",
+        "price": "$40",
+        "currentPrice": "$199"
+    },{
+        "id": 6,
+        "img": "https://cdn.dummyjson.com/products/images/tops/Short%20Frock/thumbnail.png",
+        "brand": "n/a",
+        "category": "tops",
+        "title": "Short Frock",
+        "price": "$25",
+        "currentPrice": "$199"
+    },
+    {
+        "id": 7,
+        "img": "https://cdn.dummyjson.com/products/images/tops/Gray%20Dress/thumbnail.png",
+        "brand": "n/a",
+        "category": "tops",
+        "title": "Gray Dress",
+        "price": "$135",
+        "currentPrice": "$199"
+    },
+    {
+        "id": 8,
+        "img": "https://cdn.dummyjson.com/products/images/tops/Girl%20Summer%20Dress/thumbnail.png",
+        "brand": "n/a",
+        "category": "tops",
+        "title": "Girl Summer Dress",
+        "price": "$20",
+        "currentPrice": "$199"
+    }
+
+
+]

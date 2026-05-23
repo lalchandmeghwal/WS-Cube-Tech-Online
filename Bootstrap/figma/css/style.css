@@ -1,0 +1,12 @@
+*{
+    padding: 0  ;
+}
+
+.heading{
+    text-align: end !important;
+    background: red;
+}
+
+.myCard{
+    background: red;
+}

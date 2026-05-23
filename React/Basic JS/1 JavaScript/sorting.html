@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        var numbers = [5,2,9,13,12,6,1,7];
+
+        //numbers.sort();
+
+        console.log(numbers);
+
+        // Asc
+        numbers.sort((a, b) => a - b);
+
+        console.log(numbers);
+
+        // Desc
+        numbers.sort((a, b) => b - a);
+
+        console.log(numbers);
+
+
+        var names = ['Kunal', 'Rohit', 'Sonu', 'Amit', 'manish'];
+
+        console.log(names)
+
+        names.sort();
+        console.log(names)
+
+        //ASC
+        names.sort((a,b) => a.localeCompare(b));
+        console.log(names)
+
+        //DESC
+        names.sort((a,b) => b.localeCompare(a));
+        console.log(names)
+
+
+        var allUserInfo = [
+            {
+                name : 'User 1',
+                email : 'user@gmail.com',
+                age : 25
+            },
+            {
+                name : 'User 2',
+                email : 'user2@gmail.com',
+                age : 18
+            },
+            {
+                name : 'User 3',
+                email : 'user3@gmail.com',
+                age : 20
+            },
+            {
+                name : 'User 4',
+                email : 'user4@gmail.com',
+                age : 25
+            },
+            {
+                name : 'User 5',
+                email : 'user5@gmail.com',
+                age : 18
+            }
+        ]
+
+        allUserInfo.sort((a,b) => a.age - b.age)
+
+        console.log(allUserInfo);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+.headerTop {
+    background: #023760;
+    padding: 15px;
+}
+
+
+
+.container {
+    display: flex;
+    max-width: 1290px;
+    margin: auto;
+    color: white;
+    justify-content: space-between;
+}
+
+.container .left {
+    gap: 10px;
+}
+
+.container .left .gmail,
+.phone {
+    gap: 10px;
+}
+
+.container .left .gmail p {
+    letter-spacing: 1px;
+}
+
+.container .left .gmail:hover,
+.phone:hover {
+    color: #e6b112;
+    cursor: pointer;
+}
+
+.container .right ul {
+    display: flex;
+    gap: 5px;
+}
+
+.container .right ul a {
+    color: white;
+    font-size: 20px;
+}
+
+.container .right ul a:hover {
+    color: #e6b112;
+}
+
+.container .right ul li:first-child {
+    opacity: 0.5;
+}
+
+.headerButtom {
+    align-items: center;
+    padding: 2px 0;
+
+}
+
+.headerButtom figure img {
+    width: 130px;
+}
+
+
+.headerButtom ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    justify-content: space-between;
+    transition: all 0.3s linear;
+
+}
+
+.headerButtom ul a {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s linear;
+}
+
+.headerButtom ul>li>a:hover {
+    color: rgb(233, 2, 2);
+}
+
+
+.headerButtom ul li .active {
+    background: red;
+    padding: 10px 15px;
+    border-radius: 0 15px 0 15px;
+    color: white;
+    transition: all 0.5s linear;
+    animation: animationName 10s linear infinite;
+
+
+
+}
+
+@keyframes animationName {
+    0% {
+        background: red;
+    }
+
+    25% {
+        background: yellow;
+    }
+
+    50% {
+        background: pink;
+    }
+
+    75% {
+        background: red;
+    }
+
+    100% {
+        background: green;
+    }
+}
+
+
+/* meru */
+
+
+.headerButtom .menu {
+    width: 160px;
+    height: 70px;
+    margin-left: -10px;
+    background: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    display: none;
+    padding-top: 25px;
+    z-index: 1000;
+}
+
+.headerButtom .menu a {
+    font-size: 13px;
+}
+
+
+.headerButtom li:hover .menu {
+    display: flex;
+}
+
+#openNavBar {
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+header #phoneLogo{
+    width: 100px;
+    display: none;
+}
+
+@media (width <=1270px) {
+    .headerTop {
+        background: #000;
+        padding: 15px 20px;
+    }
+
+    .headerButtom {
+
+        padding: 2px 20px;
+
+    }
+
+    .headerButtom ul a {
+        font-size: 18px;
+    }
+}
+
+@media (width <=1100px) {
+    .headerButtom ul a {
+        font-size: 15px;
+    }
+
+    .headerButtom figure img {
+        width: 100px;
+    }
+
+    .headerButtom ul {
+        width: 90%;
+        padding: 0 10px;
+    }
+}
+
+@media (width <=890px) {
+    .headerButtom ul {
+        position: fixed;
+        background: #ccc;
+        top: 0;
+        left: -400px;
+        /* left: 0px; */
+        width: 300px;
+        display: flex;
+        height: 100vh;
+        z-index: 1000;
+        padding-top: 2rem;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        /* display: none; */
+        padding:  40px;
+    }
+
+    #openNavBar, header #phoneLogo {
+        display: block;
+    }
+}
+
+
+header .headerButtom .openSideBar {
+    left: 0px;
+}
+
+
+
+@media (width <=640px) {
+    .headerTop {
+        display: none;
+    }
+}

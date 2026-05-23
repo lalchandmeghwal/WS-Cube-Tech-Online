@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+    <h1>Multi Calculator</h1>
+
+    <div class="container">
+
+        <!-- Interest -->
+        <form class="card" id="interest">
+            <h3>Interest Calculator</h3>
+            <input type="number" id="p" placeholder="Principal" required>
+            <input type="number" id="r" placeholder="Rate" required>
+            <input type="number" id="t" placeholder="Time" required>
+            <button type="submit">Calculate</button>
+            <p id="siResult"></p>
+        </form>
+
+        <!-- BMI -->
+        <form class="card" id="BMI">
+            <h3>BMI Calculator</h3>
+            <input type="number" id="weight" placeholder="Weight (kg)" required>
+            <input type="number" id="height" placeholder="Height (m)" required>
+            <button type="submit">Calculate</button>
+            <p id="bmiResult"></p>
+        </form>
+
+        <!-- Calories (Full Width) -->
+        <form class="card " id="calcCalories">
+            <h3>Calories Calculator</h3>
+            <input type="number" id="age" placeholder="Age" required>
+            <input type="number" id="w" placeholder="Weight (kg)" required>
+            <input type="number" id="h" placeholder="Height (cm)" required>
+            <button type="submit">Calculate</button>
+            <p id="calResult"></p>
+        </form>
+
+
+
+        <div class="calculator">
+            <input type="text" placeholder="l" id="display" disabled>
+
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">DEL</button>
+                <button onclick="appendValue('/')">/</button>
+                <button onclick="appendValue('*')">*</button>
+
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button onclick="appendValue('-')">-</button>
+
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button onclick="appendValue('+')">+</button>
+
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button onclick="appendValue('.')">.</button>
+
+
+                <button onclick="appendValue('0')" class="zero">0</button>
+                <button onclick="calculate()" id="btn">=</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
